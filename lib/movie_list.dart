@@ -13,8 +13,7 @@ class MovieList extends StatefulWidget {
 
 Future<Map> getJson() async {
   var url =
-      'http://api.themoviedb.org/3/discover/movie?api_key=YOUR_KEY_HERE';
-      // The above mentioned API is deprecated as the website has been removed
+      'http://api.themoviedb.org/3/discover/movie?api_key=YOUR_KEY_HERE'; // This is a deprecated API as the website has been shut down
   var response = await http.get(url);
   return json.decode(response.body);
 }
